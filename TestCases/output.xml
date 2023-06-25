@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.4 on win32)" generated="20230625 02:42:01.446" rpa="false" schemaversion="3">
+<suite id="s1" name="Kai" source="E:\BELAJARQA\RBF-PROJECT\TestCases\Kai.robot">
+<test id="s1-t1" name="Cek harga kereta Malang Jakarta" line="7">
+<kw name="Given Sebagai user saya membuka website KAI" library="kai_steps">
+<kw name="got home page kai" library="kai_pom">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230625 02:42:01.805" level="INFO">Opening browser 'chrome' to base url 'https://www.kai.id/'.</msg>
+<status status="PASS" starttime="20230625 02:42:01.805" endtime="20230625 02:42:31.018"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230625 02:42:31.018" endtime="20230625 02:42:31.020"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230625 02:42:31.020" endtime="20230625 02:42:31.144"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:01.804" endtime="20230625 02:42:31.144"/>
+</kw>
+<kw name="cek sudah berada di home page kai" library="kai_pom">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${titlePesanTiket}</arg>
+<arg>PEMESANAN TIKET</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230625 02:42:31.288" level="INFO">Element '//*[@id="accordion"]/div[1]' contains text 'PEMESANAN TIKET'.</msg>
+<status status="PASS" starttime="20230625 02:42:31.146" endtime="20230625 02:42:31.288"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:31.145" endtime="20230625 02:42:31.288"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:01.804" endtime="20230625 02:42:31.288"/>
+</kw>
+<kw name="When Sebagai user saya menginputkan stasiun awal" library="kai_steps">
+<arg>MALANG (ML)</arg>
+<kw name="klik form stasiun awal" library="kai_pom">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sAwal}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230625 02:42:31.291" level="INFO">Clicking element '//*[@id="select2-origination2-container"]'.</msg>
+<status status="PASS" starttime="20230625 02:42:31.290" endtime="20230625 02:42:31.445"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:31.290" endtime="20230625 02:42:31.446"/>
+</kw>
+<kw name="search stasiun awal" library="kai_pom">
+<arg>${stasiunawal}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txStasiunAwal}</arg>
+<arg>${stasiunawal}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230625 02:42:31.448" level="INFO">Typing text 'MALANG (ML)' into text field '//*[@class="select2-search__field"]'.</msg>
+<status status="PASS" starttime="20230625 02:42:31.447" endtime="20230625 02:42:31.638"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:31.446" endtime="20230625 02:42:31.638"/>
+</kw>
+<kw name="pilih stasiun awal yang dicari" library="kai_pom">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${pilihStasiun}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230625 02:42:31.639" level="INFO">Clicking element '//*[@class="select2-results__option select2-results__option--highlighted"]'.</msg>
+<status status="PASS" starttime="20230625 02:42:31.639" endtime="20230625 02:42:31.703"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:31.638" endtime="20230625 02:42:31.703"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:31.289" endtime="20230625 02:42:31.703"/>
+</kw>
+<kw name="When Sebagai user saya menginputkan stasiun akhir" library="kai_steps">
+<arg>Bandung (BD)</arg>
+<kw name="klik form stasiun akhir" library="kai_pom">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${sAkhir}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230625 02:42:31.705" level="INFO">Clicking element '//*[@id="select2-destination2-container"]'.</msg>
+<status status="PASS" starttime="20230625 02:42:31.704" endtime="20230625 02:42:31.821"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:31.704" endtime="20230625 02:42:31.822"/>
+</kw>
+<kw name="search stasiun akhir" library="kai_pom">
+<arg>${stasiunakhir}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txStasiunAkhir}</arg>
+<arg>${stasiunakhir}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230625 02:42:31.823" level="INFO">Typing text 'Bandung (BD)' into text field '//*[@class="select2-search__field"]'.</msg>
+<status status="PASS" starttime="20230625 02:42:31.822" endtime="20230625 02:42:31.972"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:31.822" endtime="20230625 02:42:31.972"/>
+</kw>
+<kw name="pilih stasiun akhir yang dicari" library="kai_pom">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${pilihStasiun}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230625 02:42:31.973" level="INFO">Clicking element '//*[@class="select2-results__option select2-results__option--highlighted"]'.</msg>
+<status status="PASS" starttime="20230625 02:42:31.973" endtime="20230625 02:42:32.026"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:31.973" endtime="20230625 02:42:32.026"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:31.704" endtime="20230625 02:42:32.027"/>
+</kw>
+<kw name="When Sebagai user saya menginputkan tanggal keberangkatan" library="kai_steps">
+<kw name="klik form tanggal keberangkatan" library="kai_pom">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${tanggalBerangkat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230625 02:42:32.030" level="INFO">Clicking element '//*[@id="departure_dateh2"]'.</msg>
+<status status="PASS" starttime="20230625 02:42:32.030" endtime="20230625 02:42:32.109"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:32.029" endtime="20230625 02:42:32.109"/>
+</kw>
+<kw name="pilih tanggal keberangkatan" library="kai_pom">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${pilihTgl}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230625 02:42:32.110" level="INFO">Clicking element '//*[@id="ui-datepicker-div"]/table/tbody/tr[5]/td[6]/a'.</msg>
+<status status="PASS" starttime="20230625 02:42:32.109" endtime="20230625 02:42:32.177"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:32.109" endtime="20230625 02:42:32.177"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:32.028" endtime="20230625 02:42:32.178"/>
+</kw>
+<kw name="And Sebagai user saya memencet button pesan dan cari kereta" library="kai_steps">
+<kw name="klik button pesan dan cari kereta" library="kai_pom">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${buttonCariKereta}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230625 02:42:32.180" level="INFO">Clicking element '//*[@id="submittrain"]'.</msg>
+<status status="PASS" starttime="20230625 02:42:32.179" endtime="20230625 02:42:43.551"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230625 02:42:43.551" endtime="20230625 02:42:43.554"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:32.179" endtime="20230625 02:42:43.554"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:32.179" endtime="20230625 02:42:43.555"/>
+</kw>
+<kw name="Then Sebagai user saya melihat informasi kereta yang dicari" library="kai_steps">
+<arg>MALANG BANDUNG</arg>
+<kw name="berhasil mencari kota" library="kai_pom">
+<arg>${hasilpencarian}</arg>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${hasil}</arg>
+<arg>${hasilpencarian}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230625 02:42:43.589" level="INFO">Element '//*[@class="top-cols"]/div[1]' contains text 'MALANG BANDUNG'.</msg>
+<status status="PASS" starttime="20230625 02:42:43.557" endtime="20230625 02:42:43.589"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:43.557" endtime="20230625 02:42:43.589"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:43.556" endtime="20230625 02:42:43.590"/>
+</kw>
+<status status="PASS" starttime="20230625 02:42:01.803" endtime="20230625 02:42:43.590"/>
+</test>
+<status status="PASS" starttime="20230625 02:42:01.447" endtime="20230625 02:42:43.592"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Kai">Kai</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

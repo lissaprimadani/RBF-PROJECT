@@ -1,0 +1,8 @@
+LoginText="//*[@class='oxd-text oxd-text--h5 orangehrm-login-title']"
+usernameTextBox="//*[@name='username']"
+passwordTextBox="//*[@name='password']"
+loginButton="//*[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']"
+forgotLink="//*[@class='orangehrm-login-forgot']"
+dashboardTitle="//*[@class='oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module']"
+invalidLogin="//*[@class='oxd-text oxd-text--p oxd-alert-content-text']"
+empty=""

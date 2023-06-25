@@ -1,0 +1,5 @@
+#python -m pip install --user virtualenv
+robotframework
+robotframework-seleniumlibrary
+psycopg2
+requests
